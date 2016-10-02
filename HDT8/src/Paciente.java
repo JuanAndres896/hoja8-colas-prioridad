@@ -40,6 +40,6 @@ public class Paciente implements Comparable <Paciente> {
     }
     
     public String toString(){
-        return (nombre+", "+estado+", "+prioridad);
+        return (nombre+" - "+estado+" - "+prioridad);
     }
 }

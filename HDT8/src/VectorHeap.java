@@ -58,6 +58,9 @@ public class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E>
 		}
 		data.set(leaf,value);
 	}
+        public boolean add(E e) {
+            return offer(e);
+        }
 /*
 	public void add(E value)
 	// pre: value is non-null comparable
@@ -101,15 +104,15 @@ public class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E>
 		}
 	}
 
-	/*public E remove()
+	public E remove()
 	// pre: !isEmpty()
 	// post: returns and removes minimum value from queue
 	{
-		E minVal = getFirst();
+		E minVal = poll();
 		data.set(0,data.get(data.size()-1));
 		data.setSize(data.size()-1);
 		if (data.size() > 1) pushDownRoot(0);
 		return minVal;
-	}*/
+	}
         
 }
